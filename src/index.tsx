@@ -7,7 +7,7 @@ import { CookiesProvider } from "react-cookie";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
 export const client = new ApolloClient({
-  uri: "http://localhost:4000/graphql",
+  uri: "https://app-name-my-test.herokuapp.com/graphql",
   credentials: "include",
   cache: new InMemoryCache(),
 });
