@@ -4,6 +4,9 @@ import { FilledInput, FormGroup, Button } from "@mui/material";
 import { Prop } from "./Register";
 import { useMutation } from "@apollo/react-hooks";
 import gql from "graphql-tag";
+import Cookies from "universal-cookie";
+
+const cookies = new Cookies();
 
 const LOGIN = gql`
   mutation login($input: LoginInput!) {
@@ -31,7 +34,7 @@ export default function FormComponent({ onChangeState }: Prop) {
   const onCliLogin = () => {
     login({ variables: { input: { ...state } } });
     if (data?.login) {
-      data.setCookies();
+      cookies.set("accessToken", data.login);
     }
   };
 
