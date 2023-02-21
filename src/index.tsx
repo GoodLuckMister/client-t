@@ -12,7 +12,6 @@ export const client = new ApolloClient({
     credentials: "include",
     // uri: "http://localhost:4000/graphql",
   }),
-  credentials: "include",
   cache: new InMemoryCache(),
 });
 
