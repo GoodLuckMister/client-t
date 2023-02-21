@@ -4,10 +4,14 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { CookiesProvider } from "react-cookie";
 
-import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink } from "@apollo/client";
 
 export const client = new ApolloClient({
-  uri: "https://app-name-my-test.herokuapp.com/graphql",
+  link: new HttpLink({
+    // uri: "https://app-name-my-test.herokuapp.com/graphql",
+    credentials: "include",
+    uri: "http://localhost:4000/graphql",
+  }),
   credentials: "include",
   cache: new InMemoryCache(),
 });

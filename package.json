@@ -17,6 +17,7 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "apollo-boost": "^0.4.9",
+    "express": "^4.18.2",
     "graphql": "^16.6.0",
     "react": "^18.2.0",
     "react-cookie": "^4.1.1",
@@ -31,10 +32,11 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "node server.js"
   },
   "eslintConfig": {
     "extends": [
@@ -55,6 +57,7 @@
     ]
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "^3.0.0"
+    "@graphql-codegen/cli": "^3.0.0",
+    "ts-node": "^10.9.1"
   }
 }

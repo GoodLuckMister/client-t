@@ -35,6 +35,7 @@ export default function FormComponent({ onChangeState }: Prop) {
     login({ variables: { input: { ...state } } });
     if (data?.login) {
       cookies.set("accessToken", data.login);
+      data.setCookie();
     }
   };
 
