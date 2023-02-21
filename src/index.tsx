@@ -8,9 +8,9 @@ import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink } from "@apollo/c
 
 export const client = new ApolloClient({
   link: new HttpLink({
-    // uri: "https://app-name-my-test.herokuapp.com/graphql",
+    uri: "https://app-name-my-test.herokuapp.com/graphql",
     credentials: "include",
-    uri: "http://localhost:4000/graphql",
+    // uri: "http://localhost:4000/graphql",
   }),
   credentials: "include",
   cache: new InMemoryCache(),
